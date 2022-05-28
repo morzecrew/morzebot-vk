@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package vk_message;
+
+message VkMessage {
+    int32 user_id = 1;
+    string message = 2;
+}
+
+service VkSerivce {
+    rpc receive_vk_msg(VkMessage) returns (VkMessage);
+}
